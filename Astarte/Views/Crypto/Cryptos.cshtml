@@ -1,0 +1,178 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model Astarte.ViewModels.CryptoRateViewModel;
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Astarte - Cryptos</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="~/css/cryptos_style.css" asp-append-version="true">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" asp-append-version="true">
+</head>
+<body>
+    <div class="exit_title">
+
+        <a asp-controller="Tools" asp-action="Tool" class="exit_icon"><i class="fa fa-chevron-circle-left exit_btn" aria-hidden="true"></i></a>
+        <div class="main_title"><p>Cryptos : Rate</p></div>
+    </div>
+
+
+    <table class="container">
+        <thead>
+            <tr>
+
+                <th><h1>Cryptocurrency</h1></th>
+                <th><h1>USD</h1></th>
+                <th><h1>RUB</h1></th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>BTC</td>
+                <td>@Model.BTCUSDT $</td>
+                <td>@Model.BTCRUB ₽</td>
+
+            </tr>
+            <tr>
+                <td>ETH</td>
+                <td>@Model.ETHUSDT $</td>
+                <td>@Model.ETHRUB ₽</td>
+
+            </tr>
+            <tr>
+                <td>SOL</td>
+                <td>@Model.SOLUSDT $</td>
+                <td>@Model.SOLRUB ₽</td>
+
+            </tr>
+            <tr>
+                <td>BNB</td>
+                <td>@Model.BNBUSDT $</td>
+                <td>@Model.BNBRUB ₽</td>
+
+            </tr>
+            <tr>
+                <td>LTC</td>
+                <td>@Model.LTCUSDT $</td>
+                <td>@Model.LTCRUB ₽</td>
+
+            </tr>
+            <tr>
+                <td>DOT</td>
+                <td>@Model.DOTUSDT $</td>
+                <td>@Model.DOTRUB ₽</td>
+
+            </tr>
+            <tr>
+                <td>ADA</td>
+                <td>@Model.ADAUSDT $</td>
+                <td>@Model.ADARUB ₽</td>
+
+            </tr>
+            <tr>
+                <td>DOGE</td>
+                <td>@Model.DOGEUSDT $</td>
+                <td>@Model.DOGERUB ₽</td>
+
+            </tr>
+            <tr>
+                <td>TRX</td>
+                <td>@Model.TRXUSDT $</td>
+                <td>@Model.TRXRUB ₽</td>
+
+            </tr>
+            <tr>
+                <td>XRP</td>
+                <td>@Model.XRPUSDT $</td>
+                <td>@Model.XRPUSDT ₽</td>
+
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="calc">
+        <div class="wrapper">
+            <div class="blue-bg"></div>
+            <div class="white-bg"></div>
+
+            <form class="converter-wrapper" asp-controller="Crypto" asp-action="CalcResult" data-ajax="true" data-ajax-mode="replace" data-ajax-update="#result_end" method="post">
+                <h2>Cryptos : Converter</h2>
+                <!-- converter inputs -->
+                <div class="converter-inputs">
+                    <div class="from-amount">
+                        <label for="">Amount</label>
+                        <input type="text" class="form-control" placeholder="$" min="0" value="1" name="ammount">
+                    </div>
+                    <div class="from-currency">
+                        <label for="">From</label>
+                        <select name="left_select">
+                            <option value="bitcoin">BTC</option>
+                            <option value="ethereum">ETH</option>
+                            <option value="solana">SOL</option>
+                            <option value="usd">USD</option>
+                            <option value="binancecoin">BNB</option>
+                            <option value="dogecoin">DOGE</option>   <!--"bitcoin", "ethereum", "solana", "binancecoin", "litecoin", "polkadot", "cardano", "dogecoin", "tron", "ripple"-->
+                            <option value="tron">TRX</option>
+                            <option value="ripple">XRP</option>
+                            <option value="cardano">ADA</option>
+                            <option value="polkadot">DOT</option>
+                            <option value="litecoin">LTC</option>
+                            <option value="rub">RUB</option>
+                            <option value="terra-luna">TERRA</option>
+                            <option value="shiba-inu">SHIB</option>
+                            <option value="matic-network">MATIC</option>
+                            <option value="waves">WAVES</option>
+                        </select>
+                    </div>
+                    <div class="icon">
+                        <button type="button" id="swap-btn">
+                            <div class="arrow-4"></div>
+                        </button>
+                    </div>
+                    <div class="to-currency">
+                        <label for="">To</label>
+                        <select name="right_select">
+                            <option value="usd">USD</option>
+                            <option value="ethereum">ETH</option>
+                            <option value="solana">SOL</option>
+                            <option value="bitcoin">BTC</option>
+                            <option value="binancecoin">BNB</option>
+                            <option value="dogecoin">DOGE</option>
+                            <option value="tron">TRX</option>
+                            <option value="ripple">XRP</option>
+                            <option value="cardano">ADA</option>
+                            <option value="polkadot">DOT</option>
+                            <option value="litecoin">LTC</option>
+                            <option value="rub">RUB</option>
+                            <option value="terra-luna">TERRA</option>
+                            <option value="shiba-inu">SHIB</option>
+                            <option value="matic-network">MATIC</option>
+                            <option value="waves">WAVES</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- converted result -->
+                <div class="result-wrapper">
+                    <p>
+
+                        <div class="to-result" id="result_end"></div>
+                    </p>
+                </div>
+                <button type="submit" id="convert-btn">convert</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    
+    <script src="~/lib/jquery.unobtrusive-ajax.js"></script>
+   
+
+</body>
+</html>
+
+

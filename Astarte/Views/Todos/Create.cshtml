@@ -1,0 +1,28 @@
+﻿
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model Astarte.Models.TodoList
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Todos - Create</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="~/css/finance_create.css" asp-append-version="true" />
+
+</head>
+<body>
+    <form asp-controller="Todos" asp-action="Create">
+        <h1>Create</h1>
+        <div class="question">
+            
+            <input asp-for="Content" type="text" required />
+            <label>Content</label>
+        </div>
+
+        <button type="submit">Submit</button>
+        <a class="exit_btn" asp-controller="Todos" asp-action="Todo">Back</a>
+    </form>
+</body>
+</html>

@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Astarte.Models.TodoList>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Astarte - Todos</title>
+    <link rel="stylesheet" href="~/css/finance_style.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" asp-append-version="true">
+</head>
+<body>
+    <div class="exit_title">
+
+        <a asp-controller="Tools" asp-action="Tool" class="exit_icon"><i class="fa fa-chevron-circle-left exit_btn" aria-hidden="true"></i></a>
+        <div class="main_title"><p>Todos</p></div>
+    </div>
+
+
+    <table class="container">
+        <thead>
+            <tr>
+                <th>
+                    <div class="name_cell">
+                        <a asp-controller="Todos" asp-action="Create" class="new_item">
+                            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                        </a>
+                        <h1>Name</h1>
+                    </div>
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+
+
+
+                    <td>
+                       @item.Content
+                    </td>
+                   
+
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="post_edit">Edit</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="post_delete">Delete</a>
+                    </td>
+
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</body>
+</html>
+

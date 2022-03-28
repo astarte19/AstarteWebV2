@@ -1,0 +1,59 @@
+﻿@model Astarte.ViewModels.LoginViewModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Astarte - Log in</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="~/css/login_form.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="page_auth">
+        <div class="container">
+            <div class="left">
+                <div class="login">Sign in</div>
+                <div class="eula">Sign in to use Astarte Apps</div>
+                
+                <a class="signout_icon" asp-controller="Home" asp-action="Index"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></a>    
+            </div>
+            <div class="right">
+                <svg viewBox="0 0 320 300">
+                    <defs>
+                        <linearGradient inkscape:collect="always"
+                                        id="linearGradient"
+                                        x1="13"
+                                        y1="193.49992"
+                                        x2="307"
+                                        y2="193.49992"
+                                        gradientUnits="userSpaceOnUse">
+                            <stop style="stop-color:#23F244;"
+                                  offset="0"
+                                  id="stop876" />
+                            <stop style="stop-color:#00C09E;"
+                                  offset="1"
+                                  id="stop878" />
+                        </linearGradient>
+                    </defs>
+                    <path d="m 40,120.00016 239.99984,-3.2e-4 c 0,0 24.99263,0.79932 25.00016,35.00016 0.008,34.20084 -25.00016,35 -25.00016,35 h -239.99984 c 0,-0.0205 -25,4.01348 -25,38.5 0,34.48652 25,38.5 25,38.5 h 215 c 0,0 20,-0.99604 20,-25 0,-24.00396 -20,-25 -20,-25 h -190 c 0,0 -20,1.71033 -20,25 0,24.00396 20,25 20,25 h 168.57143" />
+                </svg>
+                <form class="form" method="post" asp-controller="Account" asp-action="Login" asp-route-returnUrl="@Model.ReturnUrl">                  
+                    <label for="email">Email</label>
+                    <input type="email" id="email_inp" asp-for="Email">                   
+                    <label for="password">Password</label>
+                    <input type="password" id="password_inp" asp-for="Password">                 
+                    <input type="submit" id="submit_btn" value="Submit">
+
+                </form>
+            </div>
+        </div>
+        </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js" asp-append-version="true"></script>
+    <script src="~/js/popup.js" asp-append-version="true"></script>
+</body>
+</html>
+
+

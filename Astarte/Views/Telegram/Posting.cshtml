@@ -1,0 +1,280 @@
+﻿
+
+@model Astarte.Models.TPost
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Astarte - Tele Posting</title>
+    <link rel="stylesheet" href="~/css/telegram_style.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://rsms.me/inter/inter-ui.css" rel="stylesheet">
+    <link rel="stylesheet"
+          href="~/css/swiper_style.css" asp-append-version="true"/>
+</head>
+<body>
+    <form asp-controller="Telegram" asp-action="Post" method="post" >
+        <div class="exit_title">
+
+            <a asp-controller="Tools" asp-action="Tool" class="exit_icon"><i class="fa fa-chevron-circle-left exit_btn" aria-hidden="true"></i></a>
+            <div class="main_title"><p class="app_title">Tele Posting</p></div>
+
+        </div>
+
+
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="posting_content">
+
+                        <div class="screen">
+                            <div class="screen__content">
+                                <div class="login">
+                                    <div class="image_icon"><i class="fa fa-picture-o" aria-hidden="true"></i></div>
+                                    <div class="image_radio">
+                                        <div class="type_title">Image</div>
+                                        <input type="radio" class="login__input" placeholder="Image psot" value="image" asp-for="PostType">
+                                    </div>
+                                    <div class="login__field">
+
+                                        <input type="url" class="login__input" placeholder="Url" asp-for="ImageUrl">
+                                    </div>
+                                    <div>OR</div>
+                                    <div class="login__field">
+
+                                        <input type="file" class="login__input">
+                                    </div>
+                                    <div class="login__field">
+
+                                        <input type="text" class="login__input" placeholder="Caption" asp-for="ImageCaption">
+                                    </div>
+                                    <!--	<button class="button login__submit">
+                            <span class="button__text">Log In Now</span>
+                            <i class="button__icon fas fa-chevron-right"></i>
+                          </button>
+                                  -->
+                                </div>
+
+                            </div>
+                            <div class="screen__background">
+                                <span class="screen__background__shape screen__background__shape4"></span>
+                                <span class="screen__background__shape screen__background__shape3"></span>
+                                <span class="screen__background__shape screen__background__shape2"></span>
+                                <span class="screen__background__shape screen__background__shape1"></span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="posting_content">
+
+                        <div class="screen">
+                            <div class="screen__content">
+                                <div class="login">
+                                    <div class="image_icon">
+                                        <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="image_radio">
+                                        <div class="type_title">Document</div>
+                                        <input type="radio" class="login__input" placeholder="" value="document" asp-for="PostType">
+                                    </div>
+                                    <div class="login__field">
+
+                                        <input type="url" class="login__input" placeholder="Url" asp-for="DocumentUrl">
+                                    </div>
+                                    <div>OR</div>
+                                    <div class="login__field">
+
+                                        <input type="file" class="login__input">
+                                    </div>
+                                    <div class="login__field">
+
+                                        <input type="text" class="login__input" placeholder="Caption" asp-for="DocumentCaption">
+                                    </div>
+                                    <!--	<button class="button login__submit">
+                            <span class="button__text">Log In Now</span>
+                            <i class="button__icon fas fa-chevron-right"></i>
+                          </button>
+                                  -->
+                                </div>
+
+                            </div>
+                            <div class="screen__background">
+                                <span class="screen__background__shape screen__background__shape4"></span>
+                                <span class="screen__background__shape screen__background__shape3"></span>
+                                <span class="screen__background__shape screen__background__shape2"></span>
+                                <span class="screen__background__shape screen__background__shape1"></span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="posting_content">
+
+                        <div class="screen">
+                            <div class="screen__content">
+                                <div class="login">
+                                    <div class="image_icon">
+                                        <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="image_radio">
+                                        <div class="type_title">Text</div>
+                                        <input type="radio" class="login__input" placeholder="" value="text" asp-for="PostType">
+                                    </div>
+                                    <div class="login__field">
+
+                                        <textarea type="url" class="login__input" placeholder="Input your text here..." asp-for="TextField"></textarea>
+                                    </div>
+
+
+
+                                    <!--	<button class="button login__submit">
+                            <span class="button__text">Log In Now</span>
+                            <i class="button__icon fas fa-chevron-right"></i>
+                          </button>
+                                  -->
+                                </div>
+
+                            </div>
+                            <div class="screen__background">
+                                <span class="screen__background__shape screen__background__shape4"></span>
+                                <span class="screen__background__shape screen__background__shape3"></span>
+                                <span class="screen__background__shape screen__background__shape2"></span>
+                                <span class="screen__background__shape screen__background__shape1"></span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="posting_content">
+
+                        <div class="screen">
+                            <div class="screen__content">
+                                <div class="login">
+                                    <div class="image_icon"><i class="fa fa-file-audio-o" aria-hidden="true"></i></div>
+                                    <div class="image_radio">
+                                        <div class="type_title">Audio</div>
+                                        <input type="radio" class="login__input" placeholder="Image psot" value="audio" asp-for="PostType">
+                                    </div>
+                                    <div class="login__field">
+
+                                        <input type="url" class="login__input" placeholder="Url" asp-for="AudioUrl">
+                                    </div>
+                                    <div>OR</div>
+                                    <div class="login__field">
+
+                                        <input type="file" class="login__input">
+                                    </div>
+                                    <div class="login__field">
+
+                                        <input type="text" class="login__input" placeholder="Caption" asp-for="AudioCaption">
+                                    </div>
+                                    <!--	<button class="button login__submit">
+                            <span class="button__text">Log In Now</span>
+                            <i class="button__icon fas fa-chevron-right"></i>
+                          </button>
+                                  -->
+                                </div>
+
+                            </div>
+                            <div class="screen__background">
+                                <span class="screen__background__shape screen__background__shape4"></span>
+                                <span class="screen__background__shape screen__background__shape3"></span>
+                                <span class="screen__background__shape screen__background__shape2"></span>
+                                <span class="screen__background__shape screen__background__shape1"></span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="posting_content">
+
+                        <div class="screen">
+                            <div class="screen__content">
+                                <div class="login">
+                                    <div class="image_icon"><i class="fa fa-file-video-o" aria-hidden="true"></i></div>
+                                    <div class="image_radio">
+                                        <div class="type_title">Video</div>
+                                        <input type="radio" class="login__input" placeholder="Image psot" value="video" asp-for="PostType">
+                                    </div>
+                                    <div class="login__field">
+
+                                        <input type="url" class="login__input" placeholder="Url" asp-for="VideoUrl">
+                                    </div>
+                                    <div>OR</div>
+                                    <div class="login__field">
+
+                                        <input type="file" class="login__input">
+                                    </div>
+                                    <div class="login__field">
+
+                                        <input type="text" class="login__input" placeholder="Caption" asp-for="VideoCaption">
+                                    </div>
+                                    <!--	<button class="button login__submit">
+                            <span class="button__text">Log In Now</span>
+                            <i class="button__icon fas fa-chevron-right"></i>
+                          </button>
+                                  -->
+                                </div>
+
+                            </div>
+                            <div class="screen__background">
+                                <span class="screen__background__shape screen__background__shape4"></span>
+                                <span class="screen__background__shape screen__background__shape3"></span>
+                                <span class="screen__background__shape screen__background__shape2"></span>
+                                <span class="screen__background__shape screen__background__shape1"></span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+
+        </div>
+        <!--Section settings-->
+        <div class="wrapper">
+            <div class="blue-bg"></div>
+            <div class="white-bg"></div>
+
+            <div class="converter-wrapper">
+                <h2>Settings</h2>
+                <!-- converter inputs -->
+                <div class="converter-inputs">
+                    <div class="from-amount">
+                        <label for="">Channel ID</label>
+                        <input type="text" class="form-control" placeholder="Channel ID" asp-for="ChatID">
+                    </div>
+                    <div class="from-currency">
+                        <label for="">Posting Time</label>
+                        <input class="form-control" type="datetime-local" asp-for="SendingTime">
+                    </div>
+
+
+                </div>
+
+                <!-- converted result -->
+                <div class="sending_btn">
+                    <button  id="convert-btn">Send</button>
+                </div>
+
+            </div>
+        </div>
+    </form>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="~/js/swiper_slider.js"></script>
+</body>
+</html>
+

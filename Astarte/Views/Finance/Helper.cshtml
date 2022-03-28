@@ -1,0 +1,78 @@
+﻿@model IEnumerable<Astarte.Models.Finance>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="~/css/finance_style.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" asp-append-version="true">
+    <title>Astarte - Finance Helper</title>
+</head>
+<body>
+    <div class="exit_title">
+
+        <a asp-controller="Tools" asp-action="Tool" class="exit_icon"><i class="fa fa-chevron-circle-left exit_btn" aria-hidden="true"></i></a>
+        <div class="main_title"><p>Finance Helper</p></div>
+    </div>
+
+
+    <table class="container">
+        <thead>
+            <tr>
+                <th>
+                    <div class="name_cell">
+                        <a asp-controller="Finance" asp-action="Create" class="new_item">
+                            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                        </a>
+                        <h1>Name</h1>
+                    </div>
+                </th>
+                <th><h1>Cost</h1></th>
+                <th><h1>Category</h1></th>
+                <th><h1>DateTime</h1></th>
+                <th><h1>Edit</h1></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+
+
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Cost)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Category)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DateTime)
+                    </td>
+
+                    <td>
+                        @Html.ActionLink("Edit", "Create", new { item.ID, item.Name, item.Cost, item.DateTime, item.Category }, new { @class = "post_edit" }) |
+                        @Html.ActionLink("Delete", "Delete", new { item.ID }, new { @class = "post_delete", onclick = "return confirm('Remove?')" })
+                    </td>
+
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+
+
+   
+
+
+</body>
+</html>

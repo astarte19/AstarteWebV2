@@ -1,0 +1,369 @@
+﻿@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Inconsolata|Merriweather");
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.42em;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 300;
+    line-height: 1em;
+    text-align: center;
+    color: #ffffff;
+}
+
+h2 {
+    font-size: 1em;
+    font-weight: 300;
+    text-align: center;
+    display: block;
+    line-height: 1em;
+    padding-bottom: 2em;
+    color: #ffffff;
+}
+
+    h2 a {
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+.blue {
+    color: #185875;
+}
+
+.yellow {
+    color: #FFF842;
+}
+
+.container th h1 {
+    font-weight: bold;
+    font-size: 1em;
+    text-align: start;
+    color: #ffffff;
+}
+
+.container td {
+    font-weight: normal;
+    font-size: 1em;
+    -webkit-box-shadow: 0 2px 2px -2px #0E1119;
+    -moz-box-shadow: 0 2px 2px -2px #0E1119;
+    box-shadow: 0 2px 2px -2px #0E1119;
+}
+
+.container {
+    text-align: left;
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+    display: table;
+    padding: 0 0 8em 0;
+}
+
+    .container td, .container th {
+        padding-bottom: 2%;
+        padding-top: 2%;
+        padding-left: 2%;
+    }
+
+    /* Background-color of the odd rows */
+    .container tr:nth-child(odd) {
+        background-color: #323C50;
+    }
+
+    /* Background-color of the even rows */
+    .container tr:nth-child(even) {
+        background-color: #2C3446;
+    }
+
+    .container th {
+        background-color: #0D6751;
+    }
+
+    .container td:first-child {
+        color: #ffffff;
+    }
+
+    .container tr:hover {
+        background-color: #094739;
+        -webkit-box-shadow: 0 6px 6px -6px #0E1119;
+        -moz-box-shadow: 0 6px 6px -6px #0E1119;
+        box-shadow: 0 6px 6px -6px #0E1119;
+    }
+
+    .container td:hover {
+        background-color: #29D4AA;
+        color: #ffffff;
+        font-weight: bold;
+        box-shadow: #01775a -1px 1px, #01775a -2px 2px, #01775a -3px 3px, #01775a -4px 4px, #01775a -5px 5px, #01775a -6px 6px;
+        transform: translate3d(6px, -6px, 0);
+        transition-delay: 0s;
+        transition-duration: 0.4s;
+        transition-property: all;
+        transition-timing-function: line;
+    }
+
+@media (max-width: 800px) {
+    .container td:nth-child(4),
+    .container th:nth-child(4) {
+        display: none;
+    }
+}
+
+
+.exit_icon {
+    color: #094739;
+    font-size: 55px;
+    margin-left: 10%;
+    text-align: center;
+}
+
+.exit_btn {
+    margin-top: 15px;
+}
+
+
+.new_item {
+    color: #ffffff;
+    font-size: 42px;
+}
+
+.exit_title {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.main_title {
+    font-size: 36px;
+    margin-right: 10%;
+    text-align: center;
+}
+
+.name_cell {
+    display: flex;
+    justify-content: space-around;
+    margin-right: 50%;
+}
+
+
+/*Calc section*/
+
+
+/*Arrows*/
+
+.arrow-4 {
+    width: 40px;
+    height: 30px;
+    display: grid;
+}
+
+    .arrow-4:before,
+    .arrow-4:after {
+        content: "";
+        grid-area: 1/1;
+        background: #29D4AA;
+        clip-path: polygon(0 10px,calc(100% - 15px) 10px,calc(100% - 15px) 0,100% 50%,calc(100% - 15px) 100%,calc(100% - 15px) calc(100% - 10px),0 calc(100% - 10px));
+        animation: a4 .5s infinite alternate;
+    }
+
+    .arrow-4:after {
+        --s: -1;
+    }
+
+@keyframes a4 {
+    0% {
+        transform: scale(var(--s,1)) translate(12px,-6px) translate(4px)
+    }
+
+    100% {
+        transform: scale(var(--s,1)) translate(12px,-6px) translate(-4px)
+    }
+}
+
+
+/*Calc sectionssss*/
+
+.wrapper {
+    background-color: #fff;
+    border-radius: 0.4rem;
+    position: relative;
+    min-height: 552px;
+    width: 100%;
+}
+
+.blue-bg {
+    position: absolute;
+    background-color: #000000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 396px;
+}
+
+.white-bg {
+    position: absolute;
+    background-color: #0D6751;
+    top: 30%;
+    left: 0;
+    width: 100%;
+    height: 396px;
+}
+
+.converter-wrapper {
+    min-width: 900px;
+    background-color: #fff;
+    border-radius: 0.4rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 4rem 3rem;
+    -webkit-box-shadow: 0 6px 6px -1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+    .converter-wrapper h2 {
+        position: absolute;
+        top: -70px;
+        left: 50%;
+        width: 100%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+        color: #fff;
+        font-size: 2.4rem;
+        letter-spacing: 2px;
+        text-align: center;
+        text-transform: uppercase;
+        line-height: 1.4;
+    }
+
+.converter-inputs {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 2fr;
+    -webkit-column-gap: 3rem;
+    -moz-column-gap: 3rem;
+    column-gap: 3rem;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+    .converter-inputs > div {
+        margin-bottom: 2rem;
+    }
+
+    .converter-inputs label {
+        color: #5d7079;
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+
+    .converter-inputs input, .converter-inputs select {
+        border: 1px solid #c6c7c9;
+        border-radius: 4px;
+        font-size: 1rem;
+        padding: 0.8rem;
+        outline: 0;
+        width: 100%;
+    }
+
+.icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-bottom: 0 !important;
+}
+
+    .icon img {
+        width: 40px;
+    }
+
+    .icon button {
+        background-color: transparent;
+        border: none;
+        outline: 0;
+        cursor: pointer;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+
+        .icon button:hover {
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+
+.result-wrapper {
+    font-size: 1.4rem;
+}
+
+#from-result {
+    color: #2C3446;
+    font-weight: bold;
+}
+
+.to-result {
+    color: #2ed06e;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#convert-btn {
+    background-color: #29D4AA;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: inherit;
+    font-size: 1.2rem;
+    padding: 0.8rem 1.4rem;
+    margin-top: 1.6rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+    .converter-wrapper h2 {
+        font-size: 2rem;
+        top: -100px;
+    }
+
+    .converter-inputs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .converter-wrapper {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        min-width: 400px;
+    }
+
+    .result-wrapper {
+        font-size: 1.2rem;
+    }
+
+    #convert-btn {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 678px) {
+    .converter-wrapper {
+        min-width: 325px;
+    }
+}

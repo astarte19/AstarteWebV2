@@ -1,0 +1,40 @@
+﻿
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model Astarte.Models.Finance
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Finance Helper - Expense</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="~/css/finance_create.css" asp-append-version="true" />
+   
+</head>
+<body>
+    <form asp-controller="Finance" asp-action="AddFinance">
+        <h1>Expense</h1>
+        <div class="question">
+            <input type="hidden" asp-for="ID" />
+            <input asp-for="Name" type="text" required />
+            <label>Name</label>
+        </div>
+        <div class="question">
+            <input asp-for="Cost" type="text" required />
+            <label>Cost</label>
+        </div>
+        <div class="question">
+            <input asp-for="Category" type="text" required />
+            <label>Category</label>
+        </div>
+        <div class="question">
+            <input asp-for="DateTime" type="datetime-local" required />
+
+        </div>
+        <button type="submit">Submit</button>
+        <a class="exit_btn" asp-controller="Finance" asp-action="Helper">Back</a>
+    </form>
+</body>
+</html>
+
