@@ -16,6 +16,7 @@ body {
 }
 .swiper {
     width: 650px;
+    margin-top: 25px;
 }
 
 .bot_title {
@@ -222,7 +223,8 @@ body {
 }
 
 .type_title {
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: 500;
     color: #000000;
 }
 
@@ -234,7 +236,7 @@ body {
     position: relative;
     min-height: 402px;
     width: 100%;
-    margin-top: 9%;
+    margin-top: 4%;
 }
 
 .blue-bg {
@@ -399,3 +401,13 @@ body {
     display: flex;
     justify-content: center;
 }
+
+
+.title_inner {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: 300;
+}
+

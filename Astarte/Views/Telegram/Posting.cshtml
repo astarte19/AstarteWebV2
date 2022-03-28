@@ -13,14 +13,17 @@
           href="~/css/swiper_style.css" asp-append-version="true"/>
 </head>
 <body>
-    <form asp-controller="Telegram" asp-action="Post" method="post" >
+    <form asp-controller="Telegram" asp-action="Post" method="post">
         <div class="exit_title">
 
             <a asp-controller="Tools" asp-action="Tool" class="exit_icon"><i class="fa fa-chevron-circle-left exit_btn" aria-hidden="true"></i></a>
             <div class="main_title"><p class="app_title">Tele Posting</p></div>
 
         </div>
-
+        <div class="title_inner">
+            <p>Add @Model.BotName to Admins</p>
+        </div>
+       
 
         <!-- Slider main container -->
         <div class="swiper">
@@ -52,10 +55,10 @@
                                         <input type="text" class="login__input" placeholder="Caption" asp-for="ImageCaption">
                                     </div>
                                     <!--	<button class="button login__submit">
-                            <span class="button__text">Log In Now</span>
-                            <i class="button__icon fas fa-chevron-right"></i>
-                          </button>
-                                  -->
+                                  <span class="button__text">Log In Now</span>
+                                  <i class="button__icon fas fa-chevron-right"></i>
+                                </button>
+                                        -->
                                 </div>
 
                             </div>
@@ -96,10 +99,10 @@
                                         <input type="text" class="login__input" placeholder="Caption" asp-for="DocumentCaption">
                                     </div>
                                     <!--	<button class="button login__submit">
-                            <span class="button__text">Log In Now</span>
-                            <i class="button__icon fas fa-chevron-right"></i>
-                          </button>
-                                  -->
+                                  <span class="button__text">Log In Now</span>
+                                  <i class="button__icon fas fa-chevron-right"></i>
+                                </button>
+                                        -->
                                 </div>
 
                             </div>
@@ -134,10 +137,10 @@
 
 
                                     <!--	<button class="button login__submit">
-                            <span class="button__text">Log In Now</span>
-                            <i class="button__icon fas fa-chevron-right"></i>
-                          </button>
-                                  -->
+                                  <span class="button__text">Log In Now</span>
+                                  <i class="button__icon fas fa-chevron-right"></i>
+                                </button>
+                                        -->
                                 </div>
 
                             </div>
@@ -176,10 +179,10 @@
                                         <input type="text" class="login__input" placeholder="Caption" asp-for="AudioCaption">
                                     </div>
                                     <!--	<button class="button login__submit">
-                            <span class="button__text">Log In Now</span>
-                            <i class="button__icon fas fa-chevron-right"></i>
-                          </button>
-                                  -->
+                                  <span class="button__text">Log In Now</span>
+                                  <i class="button__icon fas fa-chevron-right"></i>
+                                </button>
+                                        -->
                                 </div>
 
                             </div>
@@ -218,10 +221,10 @@
                                         <input type="text" class="login__input" placeholder="Caption" asp-for="VideoCaption">
                                     </div>
                                     <!--	<button class="button login__submit">
-                            <span class="button__text">Log In Now</span>
-                            <i class="button__icon fas fa-chevron-right"></i>
-                          </button>
-                                  -->
+                                  <span class="button__text">Log In Now</span>
+                                  <i class="button__icon fas fa-chevron-right"></i>
+                                </button>
+                                        -->
                                 </div>
 
                             </div>
@@ -267,7 +270,7 @@
 
                 <!-- converted result -->
                 <div class="sending_btn">
-                    <button  id="convert-btn">Send</button>
+                    <button id="convert-btn">Send</button>
                 </div>
 
             </div>
