@@ -15,7 +15,7 @@ button {
     background: #000000;
     position: relative;
     display: grid;
-    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
     grid-template-rows: 0.05fr 1fr 1fr;
     grid-gap: 2px;
 }
@@ -39,6 +39,7 @@ button {
         letter-spacing: 2px;
         z-index: 3;
         color: #ffffff;
+       
     }
 
     .project .grid__title {
@@ -132,12 +133,13 @@ button {
     }
 
 .project__image {
-    margin-left: -50%;
+  margin-top: 10%;
+  margin-left: 30%;
 }
 
 .back_title {
     color: #ffffff;
-    
+    text-align: center;
     text-transform: uppercase;
     letter-spacing: 4px;
     text-decoration: none;
@@ -148,5 +150,13 @@ button {
         text-align: end;
     }
     .back_title#page {
+        text-align: start;
+    }
+    
+    
+    .p_left{
+        text-align: end;
+    }
+    .p_right{
         text-align: start;
     }

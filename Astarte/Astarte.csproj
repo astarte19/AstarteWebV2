@@ -45,7 +45,6 @@
     <Folder Include="Views\Todos\" />
     <Folder Include="Views\Crypto\" />
     <Folder Include="Views\Telegram\" />
-    <Folder Include="Views\Translator\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />
@@ -56,6 +55,7 @@
     <Content Remove="wwwroot\scss\" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.42" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.0" />
@@ -66,5 +66,11 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="YandexLinguistics.NET" Version="2.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Views\Translator\Translate.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Me\Wrapper.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Drop\Calendar.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Fun\Joke.cshtml" />
   </ItemGroup>
 </Project>

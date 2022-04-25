@@ -11,13 +11,13 @@
 <body>
     
     <section id="portfolio">
-        <a class="back_title" asp-controller="Home" asp-action="Index"></a>
-        <a class="back_title" asp-controller="Home" asp-action="Index" id="home"><p>Home</p></a>
-        <a class="back_title" asp-controller="Home" asp-action="Index" id="page"><p>Page</p></a>
-        <a class="back_title" asp-controller="Home" asp-action="Index"></a>
+        <a class="back_title" asp-controller="Home" asp-action="Index"><p class="p_left">Home</p></a>
+        <a class="back_title" asp-controller="Home" asp-action="Index"><p class="p_right">Page</p></a>
+       
+      
 
         <div class="project">
-            <img class="project__image" src="~/img/cryptos_icon.png" />
+            <img class="project__image" src="~/img/crypto_icon.png" />
             <p>Cryptos</p>
             <h3 class="grid__title">Cryptocurrency rate & convert</h3>
             <div class="grid__overlay">
@@ -28,7 +28,7 @@
         </div>
 
         <div class="project">
-            <img class="project__image" src="~/img/todoapp_icon.png" />
+            <img class="project__image" src="~/img/todo_icon.png" />
             <p>Todos</p>
             <h3 class="grid__title">Todo app</h3>
             <div class="grid__overlay">
@@ -40,7 +40,7 @@
         </div>
 
         <div class="project">
-            <img class="project__image" src="~/img/financehelper_icon.png" />
+            <img class="project__image" src="~/img/finance_icon.png" />
             <p>Finance Helper</p>
             <h3 class="grid__title">CRUD your expenses</h3>
             <div class="grid__overlay">
@@ -52,7 +52,7 @@
         </div>
 
         <div class="project">
-            <img class="project__image" src="~/img/teleposting_icon.png" />
+            <img class="project__image" src="~/img/tele_icon.png" />
             <p>Tele posting</p>
             <h3 class="grid__title">Telegram posting bot</h3>
             <div class="grid__overlay">
@@ -62,43 +62,9 @@
                 
             </div>
         </div>
-        <div class="project">
-            <img class="project__image" src="~/img/cloud_icon.png" />
-            <p>Cloud</p>
-            <h3 class="grid__title">FTP client</h3>
-            <div class="grid__overlay">
-                <button class="viewbutton">Open</button>
-            </div>
-        </div>
+       
 
-        <div class="project">
-            <img class="project__image" src="~/img/translater_icon.png" />
-            <p>Translat0r</p>
-            <h3 class="grid__title">Languages translater</h3>
-            <div class="grid__overlay">
-                <form asp-controller="Translator" asp-action="Translate">
-                    <button class="viewbutton">Open</button>
-                </form>
-               
-            </div>
-        </div>
-
-        <div class="project">
-            <img class="project__image" src="~/img/demo_app.png" />
-            <p>Project</p>
-            <h3 class="grid__title">Description</h3>
-            <div class="grid__overlay">
-                <button class="viewbutton">Open</button>
-            </div>
-        </div>
-        <div class="project">
-            <img class="project__image" src="~/img/demo_app.png" />
-            <p>Project</p>
-            <h3 class="grid__title">Description</h3>
-            <div class="grid__overlay">
-                <button class="viewbutton">Open</button>
-            </div>
-        </div>
+       
 
 
     </section>

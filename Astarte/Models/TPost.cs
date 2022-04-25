@@ -3,8 +3,8 @@ namespace Astarte.Models
 {
 	public class TPost
 	{
-		public string BotName = "@astarteweb_bot";
-		public string ApiToken = "5194857594:AAF_fd5cEm84qaWGFnELLSVJ1Ue4zLciNPA";
+		public string BotName = "BOT";
+		public string ApiToken = "TOKEN";
 		public string Mode = "html";
 		
 		public string PostType { get;set; }

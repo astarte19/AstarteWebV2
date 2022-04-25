@@ -10,10 +10,7 @@ namespace Astarte.Controllers
 	[Authorize(Roles = "admin,user")]
 	public class TelegramController : Controller
 	{
-        string photourl = "https://e7.pngegg.com/pngimages/340/226/png-clipart-purple-and-white-logo-c-computer-programming-software-development-programmer-marklogic-coder-miscellaneous-purple.png";
-        string chatId = "@memes_for_coders";
-
-        string UrlCaption = "<a href='https://t.me/memes_for_coders'>CODE memes and News</a>";
+       
 
         public async Task<IActionResult> Posting(TPost model)
         {
