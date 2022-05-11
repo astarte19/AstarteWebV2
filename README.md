@@ -3,5 +3,5 @@ AstarteWeb GEN2, portfolio application with auth to access private applications(
 You can check this application on 
 https://a6319-3f50.g.d-f.pw/
 Test account:
-Login: astarte@mail.ru
-Password: Bomberini243
+Login: user@mail.ru
+Password: Test123
